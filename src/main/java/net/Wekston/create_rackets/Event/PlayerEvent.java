@@ -11,10 +11,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.event.RegisterCommandsEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import rbasamoyai.createbigcannons.index.CBCEntityTypes;
 import rbasamoyai.createbigcannons.munitions.big_cannon.he_shell.HEShellProjectile;
 
@@ -23,18 +23,19 @@ import java.util.Random;
 import static net.Wekston.create_rackets.CreateRacketsMod.onStartRacketEvent;
 
 
-@Mod.EventBusSubscriber(modid = CreateRacketsMod.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@EventBusSubscriber(modid = CreateRacketsMod.MODID)
 public class PlayerEvent {
     @SubscribeEvent
     public static void registerCommands(RegisterCommandsEvent event) {
         CRAllCommands.register(event.getDispatcher());
     }
+
     private static final Random random = new Random();
     private static int tick = 0;
 
     @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        Player player = event.player;
+    public static void onPlayerTick(PlayerTickEvent.Post event) {
+        Player player = event.getEntity();
         MinecraftServer server = player.getServer();
         if (server == null) return;
 
@@ -43,7 +44,7 @@ public class PlayerEvent {
 
         int randomTickSpeed = level.getGameRules().getInt(GameRules.RULE_RANDOMTICKING);
         if (CRDataHelper.isAttack()) {
-            if (event.phase != TickEvent.Phase.END || event.player.level().isClientSide()) {
+            if (event.getEntity().level().isClientSide()) {
                 return;
             }
             tick++;
