@@ -1,0 +1,31 @@
+{
+  "create_rackets.command.radius.set": "Радиус эпицентра изменен на %s блоков",
+  "create_rackets.command.radius.get": "Радиус эпицентра равен %s блоков",
+
+  "create_rackets.command.cooldown.get": "Интервал между боеприпасами равен %s секунд",
+  "create_rackets.command.cooldown.set": "Интервал между боеприпасами изменен %s секунд",
+
+  "create_rackets.command.center.get": "Эпицент находится на координатах %s, %s, %s",
+  "create_rackets.command.center.set": "Эпицентр изменен на координаты %s, %s, %s",
+
+  "create_rackets.command.circle.get": "Форма круга для спавна равна %s",
+  "create_rackets.command.circle.set": "Форма круга для спавна изменена %s",
+
+  "create_rackets.command.fuze.get": "Взрыватель установлен на %s",
+  "create_rackets.command.fuze.set": "Взрыватель изменен на %s",
+
+  "create_rackets.command.random_chance.get": "Шанс спавна ивента равен %s",
+  "create_rackets.command.random_chance.set": "Шанс появления ивента изменен на %s",
+
+  "create_rackets.command.seconds.get": "Интервал между ивентами (шанс срабатывания %s) %s",
+  "create_rackets.command.seconds.set": "Интервал между ивентами изменен на %s",
+
+  "create_rackets.info.start_rackets": "\n     Объявлена артиллерийская опасность\n",
+  "create_rackets.info.stop_rackets": "\n   Отмена артиллерийская опасность\n",
+
+
+  "create_rackets.command.start": "Ивент запущен",
+  "create_rackets.command.start.fail": "Ошибка. Ивент уже начался",
+  "create_rackets.command.stop": "Ивент остановлен",
+  "create_rackets.command.stop.fail": "Ошибка. Ивент уже закончился"
+}

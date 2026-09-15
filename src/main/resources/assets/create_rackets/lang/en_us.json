@@ -1,0 +1,31 @@
+{
+  "create_rackets.command.radius.set": "The epicenter radius has been changed %s blocks",
+  "create_rackets.command.radius.get": "The epicenter radius is %s blocks",
+
+  "create_rackets.command.cooldown.get": "The interval between munitions is %s seconds",
+  "create_rackets.command.cooldown.set": "The interval between munitions has been changed %s seconds",
+
+  "create_rackets.command.center.get": "The epicenter is located at the coordinates %s, %s, %s",
+  "create_rackets.command.center.set": "The epicenter has been changed to the coordinates %s, %s, %s",
+
+  "create_rackets.command.circle.get": "The shape of the spawn circle is %s",
+  "create_rackets.command.circle.set": "The spawn circle shape has been changed %s",
+
+  "create_rackets.command.fuze.get": "The fuze is %s",
+  "create_rackets.command.fuze.set": "The fuze has been changed to %s",
+
+  "create_rackets.command.random_chance.get": "The event spawn chance is equal to %s",
+  "create_rackets.command.random_chance.set": "The chance of the event spawn has been changed to %s",
+
+  "create_rackets.command.seconds.get": "Interval between events (trigger chance %s) %s",
+  "create_rackets.command.seconds.set": "Interval between events has been changed to %s",
+
+  "create_rackets.info.start_rackets": "\n     Artillery threat decrated\n",
+  "create_rackets.info.stop_rackets": "\n   Cancellation of artillery threat\n",
+
+
+  "create_rackets.command.start": "The event has starting",
+  "create_rackets.command.start.fail": "Error. The event has already started",
+  "create_rackets.command.stop": "The event has stopping",
+  "create_rackets.command.stop.fail": "Error. The event has already stopped"
+}
